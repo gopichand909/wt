@@ -3,102 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Tech Solutions</title>
+    <title>Application Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 20px;
         }
-
-        header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        label {
+            display: block;
+            margin-bottom: 5px;
         }
-
-        section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2, p {
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-align: center;
-            text-decoration: none;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
+        input, select, textarea {
             width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    
-    <header>
-        <h1>Awesome Tech Solutions</h1>
-        <p>Revolutionizing Technology with Innovation</p>
-    </header>
 
-    <section>
-        <h2>Welcome to Awesome Tech Solutions</h2>
-        <p>We are on a mission to transform the tech industry. Our cutting-edge solutions are designed to simplify your digital journey.</p>
-        <p>Why choose us:</p>
-        <ul>
-            <li>State-of-the-art technology</li>
-            <li>User-friendly interfaces</li>
-            <li>24/7 customer support</li>
-        </ul>
-        <a href="#contact" class="cta-button">Get Started</a>
-    </section>
+    <h1>Application Form</h1>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to learn more? Contact us below:</p>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <form action="/submit" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label>
 
-            <button type="submit" class="cta-button">Submit</button>
-        </form>
-    </section>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
 
-    <footer>
-        &copy; 2024 Awesome Tech Solutions. All rights reserved.
-    </footer>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="usa">India</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United States</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+
+        <label>Skills (Check all that apply):</label>
+        <input type="checkbox" id="html" name="skills" value="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" name="skills" value="css">
+        <label for="css">CSS</label>
+        <input type="checkbox" id="js" name="skills" value="js">
+        <label for="js">JavaScript</label>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
 </body>
 </html>
 
